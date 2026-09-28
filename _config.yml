@@ -1,189 +1,554 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-
-# Main Page Setup
-
-title: John Doe's Portfolio # This is what shows up in the tab of the browser
+# ============================================================
+# JEFF MUTISYA — PORTFOLIO CONFIGURATION
+# ============================================================
+# Note: keys marked (NEW) are not in the original file. Your theme
+# templates only show them if they read those keys, for example
+# {{ site.experience }} or {{ site.certifications }}. If the theme
+# ignores a section, add a small include for it in _includes/.
+# ============================================================
 
 
+# ============================================================
+# SITE SETTINGS
+# ============================================================
 
-# Hero Section
-name: John Doe
-headline: headline message
-description: >- # dont remove this line. this will ignore all new lines until the next section
-  Write an awesome intro and discuss your highlights and qualification. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: "Jeff Mutisya | Systems & Technology Consultant"
+email: jeffkyengofficial@gmail.com
+lang: en
+timezone: Africa/Nairobi
 
-# Place your profile image in /assets/images/profile-image/folder and edit the file name
+# Set these to your real GitHub Pages address.
+# User site (Jeff-Mutisya.github.io repo): url only, baseurl empty.
+# Project site (any other repo name): baseurl: "/repo-name"
+url: "https://jeff-mutisya.github.io"
+baseurl: ""
+
+# SEO and social sharing (NEW)
+# Used by jekyll-seo-tag and jekyll-sitemap if enabled under plugins.
+seo:
+  description: >-
+    Jeff Mutisya is a systems and technology consultant in Nairobi, Kenya.
+    He delivers Odoo and ERP implementations, business systems analysis,
+    telecoms and network infrastructure, and process automation across
+    East Africa.
+  keywords:
+    - Odoo consultant Kenya
+    - ERP implementation Nairobi
+    - Business systems analyst
+    - Zoho consultant
+    - Network infrastructure
+    - MikroTik
+    - Ubiquiti
+    - Systems and technology consultant
+  og_image: ./assets/images/profile-image/avatar.jpeg
+  twitter_card: summary
+  locale: en_KE
+
+favicon: ./assets/images/favicon.png   # (NEW) add a 64x64 or 128x128 PNG
+
+
+# ============================================================
+# HERO SECTION
+# ============================================================
+
+name: "Jeff Mutisya"
+
+headline: "Systems & Technology Consultant"
+
+# Short line under the headline (NEW)
+tagline: "I help organisations get their systems, networks and processes working together."
+
+description: >-
+  Systems and technology consultant working across business systems,
+  telecommunications infrastructure, network operations, AI,
+  automation, and intelligent infrastructure. Based in Nairobi, with
+  around 20 ERP and digital transformation projects delivered across
+  East Africa.
+
+location: "Nairobi, Kenya"          # (NEW)
+availability: "Open to consulting, contract and full-time roles"   # (NEW)
+
+# Profile image
 profile_image: ./assets/images/profile-image/avatar.jpeg
+profile_image_alt: "Portrait of Jeff Mutisya"   # (NEW) for accessibility
+
+# Resume
+resume-url: /assets/resume/Jeff-Mutisya-CV.pdf
+
+# Buttons shown in the hero (NEW)
+cta:
+  primary:
+    label: "View Projects"
+    url: "#projects"
+  secondary:
+    label: "Download CV"
+    url: /assets/resume/Jeff-Mutisya-CV.pdf
 
 
-# Link your resume
-# You can place your resume in assets/resume/{resume.pdf or add external link such as pdf saved in google drive 
-resume-url: https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing # or /assets/resume/resume.pdf
+# ============================================================
+# ABOUT (NEW)
+# ============================================================
+
+about:
+  heading: "About Me"
+  paragraphs:
+    - >-
+      I work where business systems meet network infrastructure. My
+      career started in telecoms and network engineering and grew into
+      ERP consulting, so I can talk to finance teams about their
+      processes and to engineers about their networks.
+    - >-
+      I have delivered around 20 ERP and digital transformation
+      projects across manufacturing, FMCG, telecoms, distribution and
+      services. I work through the full cycle: discovery, gap analysis,
+      configuration, user testing, go-live and support after launch.
+    - >-
+      I present regularly to CFOs, Finance Directors and CEOs, and I
+      write documentation that people actually use.
+    - >-
+      Outside client work, I care about community connectivity. I have
+      helped deploy public Wi-Fi for communities and worked on school
+      internet connectivity proposals.
+
+# Headline numbers (NEW)
+stats:
+  - value: "20+"
+    label: "ERP and digital transformation projects"
+  - value: "3"
+    label: "Countries worked in with unconnected.org (Kenya, Nigeria, Malawi)"
+  - value: "600+"
+    label: "Daily users on community Wi-Fi networks I supported"
+  - value: "5"
+    label: "Group entities covered in one IT systems role"
 
 
-# Set up external links - this will show up as small icons next to your name.
+# ============================================================
+# SERVICES (NEW)
+# ============================================================
 
-external-links:    # input only your own url slug. The icons with missing entries will not appear.
-  linkedin: test    # https://www.linkedin.com/in/{your url slug} 
-  github: leea12    # https://github.com/{your url slug} 
-  stackoverflow: test      # https://stackoverflow.com/users/{your url slug}
-  medium:            # https://medium.com/@{your url slug} 
-  x-twitter:   # https://x.com/{your url slug} 
-  threads:            # https://threads.net/@{your url slug} 
-  instragram:       # https://instagram.com/{your url slug} 
-  youtube:           # https://youtube.com/@{your url slug} 
-  discord:            # https://discord.com/users/{your url slug} 
-  bluesky:           # https://bsky.app/profile/{your url slug} 
-  
+services:
+  - title: "ERP Implementation & Support"
+    icon: "fa-solid fa-gears"
+    description: >-
+      Odoo and Zoho implementations from discovery to go-live, including
+      configuration, data migration, user testing, training and
+      post-launch support.
 
-# Skills Section - Add the list of your Skills by categories/tools. The indentation for each level needs to be precise. 
+  - title: "Business Systems Analysis"
+    icon: "fa-solid fa-diagram-project"
+    description: >-
+      Requirements gathering, process mapping and gap analysis, so the
+      system is built around how your business really works.
+
+  - title: "Network & Wireless Infrastructure"
+    icon: "fa-solid fa-network-wired"
+    description: >-
+      Design, deployment and support of LAN, WLAN and community Wi-Fi
+      using MikroTik and Ubiquiti, with monitoring and performance
+      checks.
+
+  - title: "IT Systems & VoIP Administration"
+    icon: "fa-solid fa-headset"
+    description: >-
+      Microsoft 365 administration, VoIP (3CX, Teams Calling, Zoom
+      Phone), user support and IT security compliance across multiple
+      entities.
+
+  - title: "Automation & Integration"
+    icon: "fa-solid fa-robot"
+    description: >-
+      REST API integrations, workflow automation and AI-assisted
+      processes that cut manual work and errors.
+
+
+# ============================================================
+# EXPERIENCE (NEW)
+# ============================================================
+# Most recent first.
+
+experience:
+
+  - role: "MIS Lead, IT Systems & Infrastructure"
+    company: "Innovis Telecom Services"
+    location: "Nairobi, Kenya"
+    period: "Feb 2026 – Apr 2026"
+    highlights:
+      - "Ran L1 and L2 IT support and Microsoft 365 administration across 5 group entities."
+      - "Managed VoIP platforms: 3CX, Teams Calling and Zoom Phone."
+      - "Looked after LAN, WLAN, RDP and endpoint support."
+      - "Supported the Odoo ERP, logged incidents and kept IT security compliance."
+
+  - role: "ERP Solutions Architect"
+    company: "Procera Gin & NatureLock Foods"
+    location: "Kenya"
+    period: "Jan 2025 – Dec 2025"
+    highlights:
+      - "Led one Odoo engagement covering two clients, in manufacturing and FMCG."
+      - "Implemented Odoo ERP across the whole organisation at Procera Gin."
+      - "Mapped the order-to-distribution workflow, with more than 20 touchpoints."
+      - "Set up multi-entity configuration, found integration gaps and kept data consistent."
+      - "Supported users through and after go-live."
+
+  - role: "Product Lead, Technical Operations & Network Support"
+    company: "unconnected.org"
+    location: "Kenya, Nigeria, Malawi"
+    period: "Mar 2024 – Dec 2024"
+    highlights:
+      - "Deployed and supported community Wi-Fi serving 600+ daily users."
+      - "Managed MikroTik and Ubiquiti equipment across multiple sites."
+      - "Monitored network performance and wrote operational documentation."
+      - "Introduced sustainable Wi-Fi projects for communities."
+      - "Worked in all of the organisation's focus countries at the time: Kenya, Nigeria and Malawi."
+
+  - role: "ERP Consultant, Systems Support (Zoho)"
+    company: "Seargent Solutions"
+    location: "Nairobi, Kenya"
+    period: "Oct 2023 – Mar 2024"
+    highlights:
+      - "Supported Zoho CRM and Inventory for clients against agreed SLAs."
+      - "Built API integrations and configured workflows."
+      - "Managed user access and wrote documentation."
+
+  - role: "Functional Analyst, ERP Systems Support"
+    company: "Odoo Africa"
+    location: "Nairobi, Kenya"
+    period: "Oct 2022 – Mar 2023"
+    highlights:
+      - "Gave L1 and L2 Odoo support across Sales, Inventory, Finance and CRM."
+      - "Ran user acceptance testing and fixed issues after go-live."
+      - "Trained users and improved adoption."
+
+  - role: "Business Analyst, Systems & Application Support (SAP)"
+    company: "RetailSuite Solutions"
+    location: "Nairobi, Kenya"
+    period: "Feb 2022 – Oct 2022"
+    highlights:
+      - "Supported SAP, procurement and inventory systems."
+      - "Gathered requirements, validated data and documented processes."
+      - "Used Oracle reporting tools to build BI reports and executive dashboards."
+
+
+# ============================================================
+# EDUCATION & CERTIFICATIONS (NEW)
+# ============================================================
+
+education:
+  - degree: "BSc, Telecommunications & Information Technology"
+    institution: "Kenyatta University"
+    year: "2025"
+
+certifications:
+  - name: "CCNA (Levels 1 & 2)"
+    issuer: "Cisco"
+    status: "Completed"
+  - name: "Centurion PLC Programming"
+    issuer: "Centurion"
+    status: "Completed"
+  - name: "Odoo Functional Certification"
+    issuer: "Odoo"
+    status: "In progress"
+
+
+# ============================================================
+# FEATURED PROJECTS (NEW)
+# ============================================================
+# Short cards for the home page. Full write-ups go in the
+# _projects/ folder as one Markdown file per project.
+
+featured_projects:
+  - title: "Odoo ERP for Procera Gin"
+    summary: "Full-organisation Odoo rollout for a gin manufacturer, from discovery to go-live."
+    tags: [Odoo, ERP, Manufacturing]
+    url: /projects/procera-gin-odoo/
+
+  - title: "NatureLock Foods Order-to-Distribution Workflow"
+    summary: "Mapped 20+ touchpoints and closed integration gaps in a multi-entity Odoo setup."
+    tags: [Odoo, FMCG, Process Mapping]
+    url: /projects/naturelock-foods-workflow/
+
+  - title: "Community Wi-Fi Deployment"
+    summary: "Public Wi-Fi networks serving 600+ daily users, built on MikroTik and Ubiquiti."
+    tags: [Wireless, MikroTik, Ubiquiti, Community]
+    url: /projects/community-wifi/
+
+  - title: "Multi-Entity IT Systems Management"
+    summary: "Microsoft 365, VoIP and support for 5 group entities at a telecoms company."
+    tags: [Microsoft 365, VoIP, IT Operations]
+    url: /projects/multi-entity-it/
+
+
+# ============================================================
+# EXTERNAL LINKS
+# ============================================================
+
+external-links:
+
+  linkedin: jeffmutisya
+
+  github: Jeff-Mutisya
+
+  stackoverflow:
+
+  medium:
+
+  x-twitter:
+
+  threads:
+
+  instragram:   # spelling kept as-is because the theme likely expects this key
+
+  youtube:
+
+  discord:
+
+  bluesky:
+
+  email: jeffkyengofficial@gmail.com   # (NEW)
+
+
+# ============================================================
+# SKILLS
+# ============================================================
+
 skills:
-  - category: 3D Modeling
+
+  - category: Systems & Business Applications
+
     tools:
-    - Onshape
-    - Solidworks
-    - Creo
-    - Fusion 360 (Autodesk)
-    - Blender (for complex shapes or animations)
-    - Siemens NX
-    - Inventor (Autodesk)
-    - CATIA (Dassault Systèmes)
-  - category: Prototyping
-    tools:
-    - SLA
-    - CNC
-    - FDM
-    - SLS
-    - DMLS
-    - PolyJet Printing
-    - Vacuum Casting
-    - Laser Cutting
-    - Water Jet Cutting
-    - Arduino / Raspberry Pi
-    - Breadboarding for circuit testing
-  - category: Design Standards / Practices
-    tools:
-    - GD&T ASME Y14
-    - ISO fits and tolerances
-    - PLM (PTC Windchill / Arena)   
-  - category: PCB Design
-    tools:
-    - Altium Designer
-    - Altium
-    - Eagle 
-    - KiCad
-  - category: Problem Solving / Risk Management
-    tools:
-    - Root Cause Analysis (e.g., 5 Whys, Fishbone Diagram)
-    - DFMEA / PFMEA 
-    - Six Sigma methodologies
-    - Shain Red-X
+
+      - Business Systems Analysis
+      - Requirements Engineering
+      - Business Process Mapping
+      - ERP Implementation
+      - ERP Configuration
+      - Workflow Design
+      - UAT & Testing
+      - Systems Documentation
+      - User Training
+      - Data Migration
+      - Post-Go-Live Support
+      - Stakeholder Presentations
 
 
-# Contact Form Setup. Setup an account and copy over the key. When someone fills out the form, it will be received in your email.
-formspree-key:   https://formspree.io/f/{8-digit key}
+  - category: Enterprise Systems
+
+    tools:
+
+      - Odoo
+      - Zoho One
+      - SAP
+      - Oracle Reporting
+      - Microsoft 365
+      - Google Workspace
+      - QuickBooks
+      - CRM
+      - Procurement Systems
+      - Inventory Systems
+      - Finance Systems
 
 
+  - category: Telecommunications & Network Infrastructure
 
-# Active theme (Updatethis to switch themes). Make sure to keep the indentation the samne.
-colors: # this is the basic theme
+    tools:
+
+      - Network Infrastructure
+      - Network Operations
+      - Wireless Networks
+      - MikroTik
+      - Ubiquiti
+      - Starlink
+      - VoIP (3CX, Teams Calling, Zoom Phone)
+      - Network Troubleshooting
+      - Connectivity Infrastructure
+      - Network Monitoring
+      - Capacity & Performance Analysis
+      - Community Wi-Fi Deployment
+
+
+  - category: AI & Automation
+
+    tools:
+
+      - AI Workflow Design
+      - AI-Assisted Operations
+      - Process Automation
+      - Intelligent Systems
+      - Requirements Automation
+      - Workflow Orchestration
+      - API Integration
+      - Business Process Automation
+
+
+  - category: Technical Analysis & Solution Design
+
+    tools:
+
+      - Systems Architecture
+      - Solution Design
+      - Technical Requirements
+      - Process Modelling
+      - Gap Analysis
+      - Integration Analysis
+      - Technical Documentation
+      - Data & Reporting
+      - Root Cause Analysis
+
+
+  - category: Data & Development
+
+    tools:
+
+      - SQL
+      - PostgreSQL
+      - REST APIs
+      - Excel (Power Query, Pivot Tables)
+      - Git & GitHub
+
+
+  - category: Telecommunications Engineering
+
+    tools:
+
+      - TCP/IP
+      - LAN/WAN
+      - Routing & Switching
+      - MPLS
+      - Wireless Networking
+      - Network Performance
+      - Packet Loss Analysis
+      - Throughput
+      - Latency
+      - QoS
+      - CCNA
+      - AutoCAD
+      - Technical & Network Drawings
+
+
+# ============================================================
+# CONTACT
+# ============================================================
+
+# Leave empty until you set up Formspree (formspree.io).
+formspree-key:
+
+contact:                                    # (NEW)
+  heading: "Get in Touch"
+  intro: >-
+    Have an ERP, systems or network project in mind? Send me a message
+    and I will reply as soon as I can.
+  email: jeffkyengofficial@gmail.com
+  location: "Nairobi, Kenya"
+  # Add a phone number here only if you are happy to have it public.
+  # phone: ""
+
+
+# ============================================================
+# NAVIGATION (NEW)
+# ============================================================
+
+navigation:
+  - label: "About"
+    url: "#about"
+  - label: "Services"
+    url: "#services"
+  - label: "Experience"
+    url: "#experience"
+  - label: "Skills"
+    url: "#skills"
+  - label: "Projects"
+    url: "#projects"
+  - label: "Contact"
+    url: "#contact"
+
+footer:                                     # (NEW)
+  text: "© 2026 Jeff Mutisya. All rights reserved."
+
+
+# ============================================================
+# THEME
+# ============================================================
+
+colors:
+
   text: "#1a1c20"
-  border: "#ddd"
-  link: "#4a76ee"
-  highlight: "#0c0cf2"
+
+  border: "#d9d9d9"
+
+  link: "#315f8c"
+
+  highlight: "#173f5f"
+
   background: "#ffffff"
-  light_background: "#f3f5fb"
 
-# A few examples. 
-basic theme:
-  text: "#1a1c20"
-  border: "#ddd"
-  link: "#4a76ee"
-  highlight: "#0c0cf2"
-  background: "#ffffff"
-  light_background: "#f3f5fb"
-  
-  mint theme:
-  text: "#2c3333"
-  border: "#e0f2ef"
-  link: "#40b3a2"
-  highlight: "#2a9d8f"
-  background: "#f7fbfa"
-  light_background: "#f0f9f7"
-  
-lemon theme:
-  text: "#2d2926"
-  border: "#f7f3e3"
-  link: "#ffc94d"
-  highlight: "#ffb800"
-  background: "#fffdf5"
-  light_background: "#fff9e6"
-  
-  pink theme:
-  text: "#2d2d2d"
-  border: "#f8e2e2"
-  link: "#ff8fa3"
-  highlight: "#ff4d6d"
-  background: "#fff8f8"
-  light_background: "#fff5f6"
+  light_background: "#f4f6f8"
 
 
+# ============================================================
+# ANALYTICS (NEW, optional)
+# ============================================================
+
+analytics:
+  google_analytics:      # e.g. G-XXXXXXXXXX
+  plausible_domain:
 
 
-
-
-#########################################################################################################
-# Build settings for the site. Editing the below may cause the site to malfunction.
+# ============================================================
+# BUILD SETTINGS
+# DO NOT REMOVE
+# ============================================================
 
 collections:
+
   projects:
+
     output: true
+
     permalink: /projects/:path/
 
 
 markdown: kramdown
+
 highlighter: rouge
+
 kramdown:
+
   syntax_highlighter: rouge
+
   syntax_highlighter_opts:
+
     css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
-      start_line: 1
-      indent: 0
+
+  span:
+
+    line_numbers: false
+
+  block:
+
+    line_numbers: false
+
+    start_line: 1
+
+    indent: 0
+
 
 plugins:
+
   - jekyll-feed
+  - jekyll-seo-tag        # (NEW) needs {% seo %} in the head include
+  - jekyll-sitemap        # (NEW) generates sitemap.xml
+
+# Both new plugins are supported on GitHub Pages. Add them to the
+# Gemfile as well if you build locally.
 
 include:
+
   - _projects
 
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Files Jekyll should skip (NEW)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - .git
