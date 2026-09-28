@@ -12,7 +12,7 @@
 # SITE SETTINGS
 # ============================================================
 
-title: "Jeff Mutisya | Systems & Technology Consultant"
+title: "Jeff Mutisya"
 email: jeffkyengofficial@gmail.com
 lang: en
 timezone: Africa/Nairobi
@@ -20,8 +20,9 @@ timezone: Africa/Nairobi
 # Set these to your real GitHub Pages address.
 # User site (Jeff-Mutisya.github.io repo): url only, baseurl empty.
 # Project site (any other repo name): baseurl: "/repo-name"
+# This repo is "portfolio", so GitHub Pages serves it at /portfolio/
 url: "https://jeff-mutisya.github.io"
-baseurl: ""
+baseurl: "/portfolio"
 
 # SEO and social sharing (NEW)
 # Used by jekyll-seo-tag and jekyll-sitemap if enabled under plugins.
@@ -40,11 +41,11 @@ seo:
     - MikroTik
     - Ubiquiti
     - Systems and technology consultant
-  og_image: ./assets/images/profile-image/avatar.jpeg
+  og_image: /assets/images/profile-image/avatar.jpeg
   twitter_card: summary
   locale: en_KE
 
-favicon: ./assets/images/favicon.png   # (NEW) add a 64x64 or 128x128 PNG
+favicon: /assets/images/favicon.svg
 
 
 # ============================================================
@@ -69,7 +70,7 @@ location: "Nairobi, Kenya"          # (NEW)
 availability: "Open to consulting, contract and full-time roles"   # (NEW)
 
 # Profile image
-profile_image: ./assets/images/profile-image/avatar.jpeg
+profile_image: /assets/images/profile-image/avatar.jpeg
 profile_image_alt: "Portrait of Jeff Mutisya"   # (NEW) for accessibility
 
 # Resume
@@ -470,17 +471,17 @@ footer:                                     # (NEW)
 
 colors:
 
-  text: "#1a1c20"
+  text: "#16324a"
 
-  border: "#d9d9d9"
+  border: "#dbe4ec"
 
-  link: "#315f8c"
+  link: "#1c4a6e"
 
-  highlight: "#173f5f"
+  highlight: "#e0a458"
 
   background: "#ffffff"
 
-  light_background: "#f4f6f8"
+  light_background: "#f4f7fa"
 
 
 # ============================================================
@@ -552,3 +553,7 @@ exclude:
   - vendor
   - README.md
   - .git
+  - Reference
+  - _site
+  - scripts
+  - LICENSE

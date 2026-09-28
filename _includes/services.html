@@ -1,0 +1,15 @@
+<!-- SECTION: Services -->
+<section id="services" class="services-section">
+    <h2>Services</h2>
+    <p class="section-intro">How I help organisations get their systems, networks and processes working together.</p>
+
+    <div class="services-grid">
+        {% for service in site.services %}
+        <div class="service-card">
+            <div class="service-icon"><i class="{{ service.icon }}"></i></div>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>

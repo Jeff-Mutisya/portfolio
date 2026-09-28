@@ -1,0 +1,20 @@
+<!-- SECTION: Featured projects -->
+<section id="featured" class="featured-section">
+    <h2>Featured Work</h2>
+    <p class="section-intro">Selected ERP implementations and infrastructure projects.</p>
+
+    <div class="featured-grid">
+        {% for project in site.featured_projects %}
+        <a class="featured-card" href="{{ project.url | relative_url }}">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.summary }}</p>
+            <div class="featured-tags">
+                {% for tag in project.tags %}
+                <span class="skill">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            <span class="featured-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        {% endfor %}
+    </div>
+</section>

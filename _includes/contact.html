@@ -1,20 +1,44 @@
-<!-- SECTION 4: Contact-->
-<section id="contact" class= "contact-section">
-    <h2>Contact</h2>
+<!-- SECTION: Contact -->
+<section id="contact" class="contact-section">
+    <h2>{{ site.contact.heading | default: "Get in Touch" }}</h2>
 
     <div class="group">
-      
-        <form action="https://formspree.io/f/{{site.formspree-key}}" method="POST">
+        <div class="contact-info">
+            <p class="contact-intro">{{ site.contact.intro }}</p>
+            <ul>
+                {% if site.contact.email %}
+                <li><i class="fa-solid fa-envelope"></i> <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+                {% endif %}
+                {% if site.contact.location %}
+                <li><i class="fa-solid fa-location-dot"></i> {{ site.contact.location }}</li>
+                {% endif %}
+                {% if site.external-links.linkedin %}
+                <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/{{ site.external-links.linkedin }}/" target="_blank" rel="noopener noreferrer">linkedin.com/in/{{ site.external-links.linkedin }}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+
+        {% if site.formspree-key %}
+        <form action="https://formspree.io/f/{{ site.formspree-key }}" method="POST">
             <label for="name">Name</label>
-            <input type="text" id="name">
+            <input type="text" id="name" name="name" required>
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
 
             <label for="message">Message</label>
-            <textarea id="message" cols = "30" rows="10" name="message"></textarea>
+            <textarea id="message" name="message" rows="8" required></textarea>
 
             <button type="submit">Send Message</button>
         </form>
+        {% else %}
+        <div class="contact-cta">
+            <p>The fastest way to reach me is by email or LinkedIn.</p>
+            <a class="btn btn-primary" href="mailto:{{ site.contact.email }}">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Send an email</span>
+            </a>
+        </div>
+        {% endif %}
     </div>
-  </section>
+</section>
