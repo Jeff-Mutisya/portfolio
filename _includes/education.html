@@ -1,0 +1,36 @@
+<!-- SECTION: Education & Certifications -->
+<section id="education" class="education-section">
+    <h2>Education &amp; Certifications</h2>
+
+    <div class="education-grid">
+        <div class="edu-col">
+            {% for edu in site.education %}
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div>
+                    <h3>{{ edu.degree }}</h3>
+                    <p>{{ edu.institution }} · {{ edu.year }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="edu-col">
+            {% for cert in site.certifications %}
+            <div class="edu-card">
+                <div class="edu-icon">
+                    {% if cert.status == "In progress" %}
+                    <i class="fa-solid fa-hourglass-half"></i>
+                    {% else %}
+                    <i class="fa-solid fa-certificate"></i>
+                    {% endif %}
+                </div>
+                <div>
+                    <h3>{{ cert.name }}</h3>
+                    <p>{{ cert.issuer }} · {{ cert.status }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

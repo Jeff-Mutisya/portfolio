@@ -1,36 +1,34 @@
-<!-- _includes/nav.html -->
+<!-- _includes/navbar.html -->
 <nav>
     <div class="left">
-        <a href="/">{{site.name}}</a>
+        <a href="{{ '/' | relative_url }}">{{ site.name }}</a>
     </div>
 
     <!-- Desktop Menu -->
     <div class="right desktop-nav">
-        <a href="/">
-            <span>Home</span>
+        {% for item in site.navigation %}
+        <a href="{{ item.url | relative_url }}">
+            <span>{{ item.label }}</span>
         </a>
-        <a href="/projects/">
-            <span>Projects</span>
-        </a>
-        <a href="{{site.resume-url}}" target="_blank" rel="noopener noreferrer">
+        {% endfor %}
+        <a href="{{ site.resume-url | relative_url }}" target="_blank" rel="noopener noreferrer">
             <span>Resume</span>
         </a>
     </div>
 
     <!-- Mobile Menu Button -->
-    <button class="menu-toggle" aria-label="Toggle menu">
-        <i class="fa fa-bars fa-2x"></i>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger"></span>
     </button>
 
     <!-- Mobile Menu -->
     <div class="mobile-nav">
-        <a href="/">
-            <span>Home</span>
+        {% for item in site.navigation %}
+        <a href="{{ item.url | relative_url }}">
+            <span>{{ item.label }}</span>
         </a>
-        <a href="/projects/">
-            <span>Projects</span>
-        </a>
-        <a href="{{site.resume-url}}" target="_blank" rel="noopener noreferrer">
+        {% endfor %}
+        <a href="{{ site.resume-url | relative_url }}" target="_blank" rel="noopener noreferrer">
             <span>Resume</span>
         </a>
     </div>
